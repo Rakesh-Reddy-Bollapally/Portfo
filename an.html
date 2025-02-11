@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #282c34;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: background 0.3s ease;
+        }
+
+        header.scrolled {
+            background: #1e2024;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #61dafb; /* Accent color for hover */
+            color: #282c34;
+        }
+
+        section {
+            padding: 6rem 2rem;
+            margin-top: 60px; /* To avoid content hidden behind fixed header */
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 1rem;
+            color: #282c34;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-family: "Fantasy", cursive; 
+            animation: fadeIn 1s ease-out;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: navy; /* Accent color */
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .project {
+            background: #fff;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 0.6s ease-out;
+        }
+
+        .project:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        footer {
+            background: #282c34;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav ul li {
+                margin: 0.5rem 0;
+            }
+
+            section {
+                padding: 4rem 1rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+                font-family: "cursive";
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome Rakesh Reddy! Portfolio</h1>
+        <p>Explore my work and skills.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>As a recent graduate, I am seeking a role where I can apply my existing knowledge while continuously learning and developing new skills. I am eager to contribute to the organization’s success and produce high-quality work.</p>
+    </section>
+
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <p><strong>INTERNSHIP:</strong> Main Flow Service and Technologies Pvt. Ltd.<br>
+           <strong>Data Analyst Intern</strong> (September 25, 2024 – November 25, 2024)</p>
+        
+            Cleaned and processed data using <strong>Pandas</strong> and <strong>Numpy</strong>.<br>
+            Conducted data analysis to uncover trends and presented findings to the team.<br>
+            Created visualizations with <strong>Matplotlib</strong> and <strong>Seaborn</strong> to highlight key insights.</li><br>
+            Built predictive models using <strong>Scikit-Learn</strong>.<br>
+            Provided actionable insights to support marketing and customer strategies.
+        
+    </section>
+
+    <section id="technical-skills">
+        <h2>Technical Skills</h2>
+        
+            <strong>Programming Languages:</strong> Python, Java<br>
+            <strong>Web Technologies:</strong> HTML, CSS<br>
+            <strong>Database:</strong> SQL<br>
+            <strong> Libraries:</strong>Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn
+        
+    </section>
+
+    <section id="certifications">
+        <h2>Certifications</h2>
+        
+        <strong>Data Analytics Essentials</strong>
+        -- Issued by Cisco Networking Academy<br>
+        <strong>Python Basics</strong>
+        -- Issued by University of Michigan through Coursera<br>
+        <strong>Fundamentals of Artificial Intelligence and Machine Learning</strong>
+        -- Issued by AWS Training & Certification<br>
+        <strong>Data Science Foundations</strong>
+        -- Issued by Great Learning Academy<br>
+        <strong>Introduction to HTML</strong>
+        -- Issued by Sololearn
+        
+    </section>
+
+    <section id="portfolio">
+        <h2>My Work</h2>
+        <div class="project">
+            <h3>Project 1: Crop Recommendation System</h3>
+            <p>Designed a predictive Machine Learning model to optimize crop selection using soil, weather, and yield data. Applied ML algorithms like logistic regression, random forest, and SVM to enhance agricultural productivity. Enabled informed decision-making for farmers to improve sustainability and yield.</p>
+        </div>
+        <div class="project">
+            <h3>Project 2: Loan Approval Prediction</h3>
+            <p>Developed a predictive Machine Learning model to forecast loan approval outcomes. Utilized logistic regression, decision tree, and random forest algorithms. Streamlined loan review processes and improved approval rates for eligible borrowers.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Get in touch with me via email or LinkedIn. I look forward to connecting with you!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Rakesh Reddy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript for additional interactivity
+        document.addEventListener('DOMContentLoaded', () => {
+            // Change header background color on scroll
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+
+        // GSAP for animations (optional)
+        if (typeof gsap !== 'undefined') {
+            gsap.from("h1", { duration: 1, opacity: 0, y: -50 });
+            gsap.from(".project", { duration: 1, opacity: 0, y: 50, stagger: 0.3 });
+        }
+    </script>
+</body>
+</html>
